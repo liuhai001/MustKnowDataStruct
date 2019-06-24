@@ -74,7 +74,6 @@ func evalRPN(tokens []string) int {
 	return -1
 }
 
-
 type stackByArray struct {
 	content []string
 	top     int
@@ -112,7 +111,6 @@ func (s *stackByArray) isOutIndexRange() bool {
 	return false
 }
 
-
 func evalRPN2(tokens []string) int {
 	number := initialization(len(tokens))
 	for _, value := range tokens {
@@ -146,12 +144,8 @@ func operatorMethod(args1 string, args2 string, oper string) int {
 	return 0
 }
 
-
-
-
-
 func main() {
-	strs := []string{ "2", "1","f", "+", "3", "*"}
+	strs := []string{"2", "1", "f", "+", "3", "*"}
 	fmt.Printf("evalRPN:%v\n", evalRPN(strs))
 
 }

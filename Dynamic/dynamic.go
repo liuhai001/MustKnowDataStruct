@@ -1,4 +1,4 @@
-package Dynamic
+package main
 
 import (
 	"fmt"
@@ -40,9 +40,8 @@ func Backtrack(input []int) ([]int, int) {
 }
 
 func main() {
-	a := []int{1}
-	//sort.Ints(a)
-	b := a[1:]
-	fmt.Printf("%p,%p\n", &a, &b)
+	a := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
+	b, length := Backtrack(a)
+	fmt.Printf("%v,%v\n", b, length)
 	return
 }
